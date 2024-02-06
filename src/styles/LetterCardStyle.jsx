@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const LetterWrapper = styled.li`
   display: flex;
@@ -22,6 +22,21 @@ export const UserInfo = styled.div`
 `;
 
 export const AvatarFigure = styled.figure`
+  ${(props) => {
+    switch (props.size) {
+      case "large":
+        return css`
+          width: 75px;
+          height: 75px;
+        `;
+      default:
+        return css`
+          width: 50px;
+          height: 50px;
+        `;
+    }
+  }}
+
   width: 50px;
   height: 50px;
   border-radius: 50%;

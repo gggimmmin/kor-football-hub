@@ -6,6 +6,7 @@ import {
   SelectWrapper,
 } from "styles/AddFormStyle";
 import { v4 as uuid } from "uuid";
+import Button from "./common/Button";
 
 export default function AddForm({ setLetters }) {
   const [nickname, setNickname] = useState("");
@@ -58,9 +59,7 @@ export default function AddForm({ setLetters }) {
           <option>황희찬</option>
         </select>
       </SelectWrapper>
-      <BtnWrapper>
-        <button>팬레터 등록</button>
-      </BtnWrapper>
+      <Button text="팬 레터 등록" />
     </Form>
   );
 }
