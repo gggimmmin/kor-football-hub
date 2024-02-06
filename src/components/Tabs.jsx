@@ -1,6 +1,9 @@
+import { MemberContext } from "context/MemberContext";
+import { useContext } from "react";
 import { Tab, TabsContainer } from "styles/TabsStyle";
 
-export default function Tabs({ activePlayer, setActivePlayer }) {
+export default function Tabs() {
+  const { activePlayer, setActivePlayer } = useContext(MemberContext);
   const onActivePlayer = (event) => {
     if (event.target === event.currentTarget) return;
 
