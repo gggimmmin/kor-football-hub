@@ -1,9 +1,6 @@
-import { useState } from "react";
 import { Tab, TabsContainer } from "styles/TabsStyle";
 
-export default function Tabs() {
-  const [activePlayer, setActivePlayer] = useState("손흥민");
-
+export default function Tabs({ activePlayer, setActivePlayer }) {
   const onActivePlayer = (event) => {
     if (event.target === event.currentTarget) return;
 
