@@ -59,3 +59,14 @@ export const BtnsWrapper = styled.div`
   justify-content: flex-end;
   gap: 12px;
 `;
+
+export const Textarea = styled.textarea`
+  font-size: 24px;
+  line-height: 30px;
+  padding: 12px;
+  background-color: black;
+  border-radius: 12px;
+  height: 200px;
+  resize: none;
+  color: white;
+`;
