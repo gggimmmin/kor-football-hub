@@ -6,8 +6,10 @@ import {
   Content,
 } from "styles/LetterCardStyle";
 import avatar from "assets/avavtar.png";
+import { useNavigate } from "react-router-dom";
 
 export default function LetterCard({ letter }) {
+  const navigate = useNavigate();
   const formattedDate = new Date(letter.createdAt).toLocaleDateString("ko", {
     year: "2-digit",
     month: "2-digit",
@@ -17,7 +19,7 @@ export default function LetterCard({ letter }) {
     second: "2-digit",
   });
   return (
-    <LetterWrapper>
+    <LetterWrapper onClick={() => navigate(`/detail/${letter.id}`)}>
       <UserInfo>
         <AvatarFigure>
           <img src={letter.avatar ?? avatar} alt="아바타이미지" />
