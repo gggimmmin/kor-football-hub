@@ -1,9 +1,9 @@
 import { BtnWrapper } from "styles/AddFormStyle";
 
-export default function Button({ text }) {
+export default function Button({ text, onClick = () => {} }) {
   return (
     <BtnWrapper>
-      <button>{text}</button>
+      <button onClick={onClick}>{text}</button>
     </BtnWrapper>
   );
 }

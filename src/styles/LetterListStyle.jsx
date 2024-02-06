@@ -8,4 +8,5 @@ export const ListWrapper = styled.ul`
   width: 500px;
   border-radius: 12px;
   padding: 12px;
+  color: white;
 `;
